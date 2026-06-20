@@ -253,7 +253,8 @@
   .play-btn:hover { background: rgba(255,255,255,.25); transform: scale(1.05); }
   .video-note { font-size: .82rem; }
   /* Jika embed video tersedia */
-  .video-wrapper iframe { width: 100%; height: 100%; border: none; }
+  .video-wrapper iframe,
+  .video-wrapper video { width: 100%; height: 100%; border: none; display: block; }
 
   /* ── REVIEWS ── */
   .reviews { background: var(--white); }
@@ -725,17 +726,9 @@
     <h2 class="section-title" style="margin-bottom:12px;">Lihat KasirkuPro Beraksi</h2>
     <p class="section-sub">Tonton demo singkat bagaimana KasirkuPro membantu proses kasir jadi lebih cepat dan mudah.</p>
     <div class="video-wrapper">
-      <!--
-        CARA EMBED VIDEO:
-        1. YouTube: ganti src dengan https://www.youtube.com/embed/VIDEO_ID
-        2. Video lokal: <video src="video.mp4" controls style="width:100%;height:100%"></video>
-        Hapus div.video-placeholder dan uncomment iframe di bawah:
-      -->
-      <!-- <iframe src="https://www.youtube.com/embed/VIDEO_ID" allowfullscreen></iframe> -->
-      <div class="video-placeholder">
-        <div class="play-btn">▶</div>
-        <div class="video-note">Tambahkan link video YouTube atau embed video di sini</div>
-      </div>
+      <video src="asset/video/video.mp4" controls playsinline preload="metadata" style="width:100%;height:100%;object-fit:contain;background:#000;">
+        Browser Anda tidak mendukung pemutaran video HTML5.
+      </video>
     </div>
   </div>
 </section>
