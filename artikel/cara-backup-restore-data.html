@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cara Backup & Restore Data KasirkuPro ke Google Drive – KasirkuPro</title>
+<meta name="description" content="Panduan mengamankan data toko Anda ke Google Drive dan cara restore cepat ketika ganti atau reset HP, menggunakan fitur Backup KasirkuPro.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../asset/css/style.css">
+<style>
+  .article-hero { background: linear-gradient(135deg, var(--tosca-dark) 0%, var(--tosca) 100%); color: white; padding: 140px 5% 60px; text-align: center; }
+  .article-hero .section-tag { background: rgba(255,255,255,.15); color: white; }
+  .article-hero h1 { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 900; font-size: clamp(1.8rem, 4vw, 2.6rem); margin: 18px 0 14px; line-height: 1.2; }
+  .article-meta { color: rgba(255,255,255,.75); font-size: .9rem; }
+  .article-body { max-width: 760px; margin: 0 auto; padding: 56px 5% 80px; }
+  .article-body img { width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow-md); margin: 28px 0; }
+  .article-body h2 { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; font-size: 1.4rem; color: var(--gray-900); margin: 36px 0 14px; }
+  .article-body p { color: var(--gray-700); line-height: 1.8; margin-bottom: 16px; font-size: 1.02rem; }
+  .article-body ol, .article-body ul { color: var(--gray-700); line-height: 1.8; margin: 0 0 16px 22px; font-size: 1.02rem; }
+  .article-body li { margin-bottom: 8px; }
+  .article-body strong { color: var(--gray-900); }
+  .article-tip { background: var(--tosca-light); border-left: 4px solid var(--tosca); border-radius: 8px; padding: 16px 20px; margin: 24px 0; color: var(--tosca-dark); font-size: .95rem; }
+  .article-warn { background: #FEF3C7; border-left: 4px solid #F59E0B; border-radius: 8px; padding: 16px 20px; margin: 24px 0; color: #92400E; font-size: .95rem; }
+  .back-link { display: inline-flex; align-items: center; gap: 6px; color: var(--tosca); font-weight: 600; text-decoration: none; margin-bottom: 20px; }
+  .back-link:hover { text-decoration: underline; }
+  .article-cta { background: var(--bg-alt); border-radius: var(--radius-lg); padding: 32px; text-align: center; margin-top: 48px; }
+  .article-cta h3 { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; font-size: 1.2rem; margin-bottom: 10px; color: var(--gray-900); }
+  .article-cta p { color: var(--gray-600); margin-bottom: 20px; }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="../index.html" class="nav-logo">
+    <div class="nav-logo-icon">
+      <svg viewBox="0 0 24 24"><path d="M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zm7 4a5 5 0 1 0 0 10A5 5 0 0 0 12 7zm0 2a3 3 0 1 1 0 6 3 3 0 0 1 0-6zm0 1a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"/></svg>
+    </div>
+    <span class="nav-logo-text">KasirKu Pro</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="../index.html#fitur">Fitur</a></li>
+    <li><a href="../index.html#video">Video</a></li>
+    <li><a href="../index.html#ulasan">Ulasan</a></li>
+    <li><a href="../index.html#postingan">Artikel</a></li>
+    <li><a href="../index.html#tentang">Tentang</a></li>
+  </ul>
+  <a href="../index.html#download" class="nav-cta">⬇ Download Gratis</a>
+  <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <ul>
+    <li><a href="../index.html#fitur" onclick="toggleMenu()">Fitur</a></li>
+    <li><a href="../index.html#video" onclick="toggleMenu()">Video</a></li>
+    <li><a href="../index.html#ulasan" onclick="toggleMenu()">Ulasan</a></li>
+    <li><a href="../index.html#postingan" onclick="toggleMenu()">Artikel</a></li>
+    <li><a href="../index.html#tentang" onclick="toggleMenu()">Tentang</a></li>
+  </ul>
+  <a href="../index.html#download" class="mobile-cta" onclick="toggleMenu()">⬇ Download Gratis</a>
+</div>
+
+<!-- ARTICLE HERO -->
+<section class="article-hero">
+  <span class="section-tag">Keamanan Data</span>
+  <h1>Cara Backup & Restore Data KasirkuPro ke Google Drive</h1>
+  <div class="article-meta">15 Jun 2026 • 4 menit baca</div>
+</section>
+
+<!-- ARTICLE BODY -->
+<article class="article-body">
+  <a href="../index.html#postingan" class="back-link">← Kembali ke semua artikel</a>
+
+  <img src="../asset/gambar/post-backup.jpg" alt="Tampilan fitur Backup Data KasirkuPro">
+
+  <p>Data toko Anda — transaksi, stok, pelanggan, hutang piutang — tersimpan langsung di perangkat HP. Ini membuat KasirkuPro bisa dipakai sepenuhnya offline, tapi juga berarti data bisa hilang kalau HP rusak, hilang, atau di-reset. Untungnya, fitur Backup membuat data Anda tetap aman tanpa ribet.</p>
+
+  <h2>Kenapa Backup Itu Penting?</h2>
+  <p>Bayangkan sudah mencatat ratusan transaksi dan data pelanggan selama berbulan-bulan, lalu HP tiba-tiba rusak atau hilang. Tanpa backup, semua data itu ikut hilang. Dengan backup rutin ke Google Drive, Anda bisa memulihkan semuanya hanya dalam beberapa menit di HP baru.</p>
+
+  <h2>1. Cara Melakukan Backup</h2>
+  <ol>
+    <li>Buka tab <strong>Menu</strong> di navigasi bawah</li>
+    <li>Pilih <strong>Pengaturan</strong> (khusus akun Admin)</li>
+    <li>Ketuk <strong>Backup & Restore</strong></li>
+    <li>Pilih <strong>Backup ke Google Drive</strong></li>
+    <li>Login dengan akun Google Anda jika diminta</li>
+    <li>Tunggu proses backup selesai — progress akan ditampilkan di layar</li>
+  </ol>
+  <p>Setelah selesai, seluruh data toko (transaksi, stok, pelanggan, hutang, kas) tersimpan aman di Google Drive akun Anda.</p>
+
+  <div class="article-tip">💡 <strong>Tips:</strong> Lakukan backup secara rutin, misalnya seminggu sekali atau setiap akhir bulan, supaya data yang dipulihkan nanti tetap up-to-date.</div>
+
+  <h2>2. Cara Restore Data (Pulihkan dari Backup)</h2>
+  <p>Saat Anda ganti HP baru atau perlu mengatur ulang aplikasi, data lama bisa dipulihkan dengan mudah:</p>
+  <ol>
+    <li>Install KasirkuPro di HP baru</li>
+    <li>Buka <strong>Menu → Pengaturan → Backup & Restore</strong></li>
+    <li>Pilih <strong>Restore dari Google Drive</strong></li>
+    <li>Login dengan akun Google yang sama saat backup dilakukan</li>
+    <li>Pilih file backup yang ingin dipulihkan (biasanya backup terbaru)</li>
+    <li>Tunggu proses restore selesai</li>
+  </ol>
+  <p>Setelah restore selesai, semua data — termasuk akun kasir, riwayat transaksi, dan stok produk — akan kembali seperti sebelum HP diganti.</p>
+
+  <div class="article-warn">⚠️ <strong>Perhatian:</strong> Proses restore akan menimpa data yang sedang ada di aplikasi saat ini. Pastikan Anda memilih file backup yang benar sebelum melanjutkan.</div>
+
+  <h2>3. Keamanan Data Backup</h2>
+  <p>Data yang di-backup tersimpan di Google Drive akun pribadi Anda, bukan di server pihak ketiga manapun. Hanya Anda yang memiliki akses ke akun Google tersebut yang bisa membuka atau memulihkan data ini.</p>
+
+  <h2>Koneksi Internet Hanya untuk Backup</h2>
+  <p>Perlu diingat, KasirkuPro dirancang 100% offline untuk operasional sehari-hari — transaksi, cek stok, dan laporan semuanya berjalan tanpa internet. Koneksi internet <strong>hanya</strong> dibutuhkan saat Anda melakukan backup atau restore ke/dari Google Drive.</p>
+
+  <div class="article-cta">
+    <h3>Belum pakai KasirkuPro?</h3>
+    <p>Unduh gratis sekarang dan lindungi data toko Anda sejak hari pertama.</p>
+    <a href="../index.html#download" style="display:inline-flex;align-items:center;gap:8px;background:var(--tosca);color:white;padding:14px 28px;border-radius:50px;font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:.95rem;text-decoration:none;transition:.2s;" onmouseover="this.style.background='var(--tosca-dark)'" onmouseout="this.style.background='var(--tosca)'">⬇ Download Gratis</a>
+  </div>
+</article>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <div class="footer-logo-icon">🏪</div>
+          <span class="footer-logo-text">KasirkuPro</span>
+        </div>
+        <p class="footer-desc">Aplikasi kasir offline lengkap untuk UMKM Indonesia. Kelola penjualan, stok, pelanggan & laporan dengan mudah.</p>
+      </div>
+      <div>
+        <div class="footer-col-title">Fitur</div>
+        <ul class="footer-links">
+          <li><a href="../index.html#fitur">Kasir / POS</a></li>
+          <li><a href="../index.html#fitur">Stok Barang</a></li>
+          <li><a href="../index.html#fitur">Laporan</a></li>
+          <li><a href="../index.html#fitur">Pelanggan</a></li>
+          <li><a href="../index.html#fitur">Hutang Piutang</a></li>
+          <li><a href="../index.html#fitur">Backup Data</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Informasi</div>
+        <ul class="footer-links">
+          <li><a href="../index.html#tentang">Tentang Aplikasi</a></li>
+          <li><a href="../index.html#postingan">Artikel</a></li>
+          <li><a href="../index.html#ulasan">Ulasan</a></li>
+          <li><a href="../index.html#download">Download</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Download</div>
+        <ul class="footer-links">
+          <li><a href="../index.html#download">Google Play Store</a></li>
+          <li><a href="https://drive.usercontent.google.com/download?id=1ro8TA1zC9V1z0CIFWPxOslX7J8Ez1kle&export=download&confirm=t" target="_blank" rel="noopener">Download APK</a></li>
+        </ul>
+        <div style="margin-top:20px;">
+          <div class="footer-col-title">Rating</div>
+          <div style="color:#F59E0B;font-size:1.1rem;">⭐⭐⭐⭐⭐</div>
+          <div style="font-size:.78rem;margin-top:4px;">5.0 / 5.0 dari pengguna</div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2026 KasirkuPro. Dibuat dengan <span class="footer-heart">❤️</span> untuk UMKM Indonesia.</span>
+      <span style="font-size:.8rem;">v1.5.0 • Android • 100% Offline</span>
+    </div>
+  </div>
+</footer>
+
+<script src="../asset/js/main.js"></script>
+</body>
+</html>
