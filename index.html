@@ -233,12 +233,12 @@
   .video-section .section-title { color: white; }
   .video-section .section-sub { color: rgba(255,255,255,.75); margin: 0 auto 40px; }
   .video-wrapper {
-    max-width: 800px; margin: 0 auto;
+    max-width: 360px; margin: 0 auto;
     border-radius: var(--radius-xl); overflow: hidden;
     box-shadow: 0 32px 80px rgba(0,0,0,.4);
     border: 3px solid rgba(255,255,255,.12);
     background: #000;
-    aspect-ratio: 16/9;
+    aspect-ratio: 9/16;
     display: flex; align-items: center; justify-content: center;
   }
   .video-placeholder {
@@ -254,7 +254,7 @@
   .video-note { font-size: .82rem; }
   /* Jika embed video tersedia */
   .video-wrapper iframe,
-  .video-wrapper video { width: 100%; height: 100%; border: none; display: block; }
+  .video-wrapper video { width: 100%; height: 100%; border: none; display: block; object-fit: cover; }
 
   /* ── REVIEWS ── */
   .reviews { background: var(--white); }
@@ -516,61 +516,7 @@
     <div class="hero-right">
       <div class="phone-mockup">
         <div class="phone-screen">
-          <div class="phone-header">
-            <div class="phone-header-top">
-              <div class="phone-logo">
-                <div class="phone-logo-icon">🏪</div>
-                <div>
-                  <div class="phone-logo-text">KasirKu Pro</div>
-                  <div class="phone-logo-sub">Admin ▾</div>
-                </div>
-              </div>
-              <span style="color:rgba(255,255,255,.8);font-size:.8rem;">🔔</span>
-            </div>
-          </div>
-          <div class="phone-body">
-            <div class="phone-section-title">Ringkasan Hari Ini <span style="float:right;color:var(--tosca);font-size:.6rem;">Lihat semua ›</span></div>
-            <div class="phone-grid">
-              <div class="phone-card">
-                <div class="phone-card-icon">🛒</div>
-                <div class="phone-card-val">Rp 17.000</div>
-                <div class="phone-card-lbl">Total Penjualan</div>
-                <div class="phone-card-trend">↑ +100.0%</div>
-              </div>
-              <div class="phone-card">
-                <div class="phone-card-icon">📋</div>
-                <div class="phone-card-val" style="color:#6366F1;">1</div>
-                <div class="phone-card-lbl">Transaksi</div>
-                <div class="phone-card-trend">↑ +100.0%</div>
-              </div>
-              <div class="phone-card">
-                <div class="phone-card-icon">📊</div>
-                <div class="phone-card-val">Rp 17.000</div>
-                <div class="phone-card-lbl">Rata-rata</div>
-                <div class="phone-card-trend">↑ +100.0%</div>
-              </div>
-              <div class="phone-card">
-                <div class="phone-card-icon">📦</div>
-                <div class="phone-card-val" style="color:#F59E0B;">3</div>
-                <div class="phone-card-lbl">Produk Terjual</div>
-                <div class="phone-card-trend" style="color:var(--gray-500);">↑ hari ini</div>
-              </div>
-            </div>
-            <div class="phone-section-title">Transaksi Terakhir <span style="float:right;color:var(--tosca);font-size:.6rem;">Lihat semua ›</span></div>
-            <div class="phone-tx">
-              <div class="phone-tx-row">
-                <div><div class="phone-tx-id">INV202606200001</div><div class="phone-tx-date">20 Jun 2026 • 02:48</div></div>
-                <div style="text-align:right"><div class="phone-tx-amt">Rp 17.000</div><div class="phone-badge">Tunai</div></div>
-              </div>
-            </div>
-          </div>
-          <div class="phone-nav">
-            <div class="phone-nav-item active"><div class="phone-nav-icon">🏠</div>Dashboard</div>
-            <div class="phone-nav-item"><div class="phone-nav-icon">📊</div>Laporan</div>
-            <div class="phone-nav-item active" style="background:rgba(255,255,255,.2);border-radius:50%;padding:4px;"><div class="phone-nav-icon">⊞</div>Kasir</div>
-            <div class="phone-nav-item"><div class="phone-nav-icon">📦</div>Stok</div>
-            <div class="phone-nav-item"><div class="phone-nav-icon">⊞</div>Menu</div>
-          </div>
+          <video src="asset/video/video.mp4" autoplay muted loop playsinline controls style="width:100%;height:100%;object-fit:cover;background:#000;"></video>
         </div>
       </div>
     </div>
@@ -726,7 +672,7 @@
     <h2 class="section-title" style="margin-bottom:12px;">Lihat KasirkuPro Beraksi</h2>
     <p class="section-sub">Tonton demo singkat bagaimana KasirkuPro membantu proses kasir jadi lebih cepat dan mudah.</p>
     <div class="video-wrapper">
-      <video src="asset/video/video.mp4" controls playsinline preload="metadata" style="width:100%;height:100%;object-fit:contain;background:#000;">
+      <video src="asset/video/video.mp4" controls playsinline preload="metadata" style="width:100%;height:100%;object-fit:cover;background:#000;">
         Browser Anda tidak mendukung pemutaran video HTML5.
       </video>
     </div>
@@ -818,23 +764,40 @@
     <span class="section-tag" style="background:rgba(255,255,255,.15);color:white;">Download Sekarang</span>
     <h2 class="section-title">Mulai Kelola Toko Lebih Cerdas</h2>
     <p class="section-sub">Gratis selamanya. Tidak perlu kartu kredit. Langsung bisa dipakai.</p>
+
+    <!--
+      CATATAN: File APK & ZIP di-host di GitHub Releases (bukan di repo),
+      karena GitHub menolak file >100MB lewat git push biasa.
+      Cara update link di bawah setelah publish release baru:
+      https://github.com/muhamad-holis/KasirkuPOS/releases/download/TAG_VERSION/NAMA_FILE
+      Ganti TAG_VERSION (mis. v1.0) dan NAMA_FILE sesuai yang kamu upload di GitHub Releases.
+    -->
     <div class="download-buttons">
-      <a href="#" class="dl-btn">
-        <div class="dl-btn-icon">🤖</div>
+      <a href="#" class="dl-btn" title="Segera hadir di Google Play (placeholder)">
+        <div class="dl-btn-icon">
+          <svg viewBox="0 0 24 24" width="34" height="34"><path fill="#00D9FF" d="M3.6 2.1c-.3.3-.5.7-.5 1.3v17.2c0 .6.2 1 .5 1.3l.1.1L13.9 12v-.2L3.7 2z"/><path fill="#00F076" d="M17.3 15.4 13.9 12v-.2l3.4-3.4.1.1 4 2.3c1.1.6 1.1 1.6 0 2.3z"/><path fill="#FF3A44" d="M17.4 15.3 13.9 11.8 3.6 22.1c.4.4 1 .4 1.7.1z"/><path fill="#FFCF00" d="M17.4 8.4 5.3 1.5c-.7-.4-1.3-.3-1.7.1l10.3 10.2z"/></svg>
+        </div>
         <div>
-          <div class="dl-btn-sub">Temukan di</div>
+          <div class="dl-btn-sub">Segera hadir di</div>
           <div class="dl-btn-name">Google Play</div>
         </div>
       </a>
-      <a href="#" class="dl-btn dl-apk">
+      <a href="https://github.com/muhamad-holis/KasirkuPOS/releases/download/v1.0/kasirkuPro.apk" class="dl-btn dl-apk" target="_blank" rel="noopener">
         <div class="dl-btn-icon">📲</div>
         <div>
           <div class="dl-btn-sub">Download langsung</div>
           <div class="dl-btn-name">File APK</div>
         </div>
       </a>
+      <a href="https://github.com/muhamad-holis/KasirkuPOS/releases/download/v1.0/KasirkuPro-Install.zip" class="dl-btn dl-apk" target="_blank" rel="noopener">
+        <div class="dl-btn-icon">📦</div>
+        <div>
+          <div class="dl-btn-sub">Paket lengkap + tutorial</div>
+          <div class="dl-btn-name">APK + Panduan (ZIP)</div>
+        </div>
+      </a>
     </div>
-    <p class="download-note">Tersedia untuk Android 6.0+ • Ukuran ~97 MB • Gratis</p>
+    <p class="download-note">Tersedia untuk Android 6.0+ • Gratis • File dihosting di GitHub Releases</p>
   </div>
 </section>
 
@@ -996,8 +959,8 @@
       <div>
         <div class="footer-col-title">Download</div>
         <ul class="footer-links">
-          <li><a href="#">Google Play Store</a></li>
-          <li><a href="#">Download APK</a></li>
+          <li><a href="#download">Google Play Store</a></li>
+          <li><a href="https://github.com/muhamad-holis/KasirkuPOS/releases/download/v1.0/kasirkuPro.apk" target="_blank" rel="noopener">Download APK</a></li>
         </ul>
         <div style="margin-top:20px;">
           <div class="footer-col-title">Rating</div>
