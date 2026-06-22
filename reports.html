@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kritik & Saran – KasirkuPro</title>
+<meta name="description" content="Sampaikan kritik, saran, dan laporan bug KasirkuPro. Setiap masukan Anda membantu kami berkembang lebih baik.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="asset/css/style.css">
+<style>
+  .reports-hero {
+    background: linear-gradient(135deg, var(--tosca-dark) 0%, var(--tosca) 100%);
+    color: white;
+    padding: 140px 5% 60px;
+    text-align: center;
+  }
+  .reports-hero .section-tag { background: rgba(255,255,255,.15); color: white; }
+  .reports-hero h1 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 900;
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+    margin: 18px 0 14px;
+    line-height: 1.2;
+  }
+  .reports-hero p { color: rgba(255,255,255,.8); font-size: 1rem; max-width: 520px; margin: 0 auto; }
+  .reports-body { max-width: 720px; margin: 0 auto; padding: 56px 5% 80px; }
+  .reports-info {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-bottom: 40px;
+  }
+  .reports-info-card {
+    background: var(--bg-alt);
+    border-radius: var(--radius-md);
+    padding: 20px 16px;
+    text-align: center;
+  }
+  .reports-info-icon { font-size: 1.6rem; margin-bottom: 8px; }
+  .reports-info-title {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 700;
+    font-size: .85rem;
+    color: var(--gray-900);
+    margin-bottom: 4px;
+  }
+  .reports-info-desc { font-size: .78rem; color: var(--gray-500); line-height: 1.5; }
+  .form-wrapper {
+    background: white;
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-md);
+    overflow: hidden;
+    border: 1.5px solid var(--gray-100);
+  }
+  .form-wrapper iframe { display: block; border: none; }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    color: var(--tosca); font-weight: 600;
+    text-decoration: none; margin-bottom: 24px;
+  }
+  .back-link:hover { text-decoration: underline; }
+  @media (max-width: 600px) {
+    .reports-info { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="nav-logo">
+    <div class="nav-logo-icon">
+      <svg viewBox="0 0 24 24"><path d="M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zm7 4a5 5 0 1 0 0 10A5 5 0 0 0 12 7zm0 2a3 3 0 1 1 0 6 3 3 0 0 1 0-6zm0 1a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"/></svg>
+    </div>
+    <span class="nav-logo-text">KasirKu Pro</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html#fitur">Fitur</a></li>
+    <li><a href="index.html#video">Video</a></li>
+    <li><a href="index.html#ulasan">Ulasan</a></li>
+    <li><a href="index.html#postingan">Artikel</a></li>
+    <li><a href="reports.html" style="color:var(--tosca);font-weight:700;">Saran</a></li>
+    <li><a href="index.html#tentang">Tentang</a></li>
+  </ul>
+  <a href="index.html#download" class="nav-cta">⬇ Download Gratis</a>
+  <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <ul>
+    <li><a href="index.html#fitur" onclick="toggleMenu()">Fitur</a></li>
+    <li><a href="index.html#video" onclick="toggleMenu()">Video</a></li>
+    <li><a href="index.html#ulasan" onclick="toggleMenu()">Ulasan</a></li>
+    <li><a href="index.html#postingan" onclick="toggleMenu()">Artikel</a></li>
+    <li><a href="reports.html" onclick="toggleMenu()">Kritik & Saran</a></li>
+    <li><a href="index.html#tentang" onclick="toggleMenu()">Tentang</a></li>
+  </ul>
+  <a href="index.html#download" class="mobile-cta" onclick="toggleMenu()">⬇ Download Gratis</a>
+</div>
+
+<!-- HERO -->
+<section class="reports-hero">
+  <span class="section-tag">Kami Mendengarkan</span>
+  <h1>Kritik & Saran Anda</h1>
+  <p>Punya masukan, menemukan bug, atau ada fitur yang Anda harapkan? Sampaikan langsung — setiap pesan akan kami baca dan tindaklanjuti.</p>
+</section>
+
+<!-- BODY -->
+<div class="reports-body">
+  <a href="index.html" class="back-link">← Kembali ke beranda</a>
+
+  <div class="reports-info">
+    <div class="reports-info-card">
+      <div class="reports-info-icon">🐛</div>
+      <div class="reports-info-title">Laporkan Bug</div>
+      <div class="reports-info-desc">Temukan masalah atau error di aplikasi? Ceritakan di sini.</div>
+    </div>
+    <div class="reports-info-card">
+      <div class="reports-info-icon">💡</div>
+      <div class="reports-info-title">Saran Fitur</div>
+      <div class="reports-info-desc">Ada fitur yang kamu butuhkan? Usulan kamu sangat berarti.</div>
+    </div>
+    <div class="reports-info-card">
+      <div class="reports-info-icon">⭐</div>
+      <div class="reports-info-title">Berikan Ulasan</div>
+      <div class="reports-info-desc">Ceritakan pengalamanmu menggunakan KasirkuPro sehari-hari.</div>
+    </div>
+  </div>
+
+  <div class="form-wrapper">
+    <iframe
+      src="https://docs.google.com/forms/d/e/1FAIpQLScilzQLMtTjnkX-LWpyGThYzQoVtO6Gs4SUb3ixBcqqGMuvRw/viewform?embedded=true"
+      width="100%"
+      height="893"
+      frameborder="0"
+      marginheight="0"
+      marginwidth="0">
+      Memuat formulir…
+    </iframe>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <div class="footer-logo-icon">🏪</div>
+          <span class="footer-logo-text">KasirkuPro</span>
+        </div>
+        <p class="footer-desc">Aplikasi kasir offline lengkap untuk UMKM Indonesia. Kelola penjualan, stok, pelanggan & laporan dengan mudah.</p>
+      </div>
+      <div>
+        <div class="footer-col-title">Fitur</div>
+        <ul class="footer-links">
+          <li><a href="index.html#fitur">Kasir / POS</a></li>
+          <li><a href="index.html#fitur">Stok Barang</a></li>
+          <li><a href="index.html#fitur">Laporan</a></li>
+          <li><a href="index.html#fitur">Pelanggan</a></li>
+          <li><a href="index.html#fitur">Hutang Piutang</a></li>
+          <li><a href="index.html#fitur">Backup Data</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Informasi</div>
+        <ul class="footer-links">
+          <li><a href="index.html#tentang">Tentang Aplikasi</a></li>
+          <li><a href="index.html#postingan">Artikel</a></li>
+          <li><a href="index.html#ulasan">Ulasan</a></li>
+          <li><a href="reports.html">Kritik & Saran</a></li>
+          <li><a href="index.html#download">Download</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Download</div>
+        <ul class="footer-links">
+          <li><a href="index.html#download">Google Play Store</a></li>
+          <li><a href="https://drive.usercontent.google.com/download?id=1ro8TA1zC9V1z0CIFWPxOslX7J8Ez1kle&export=download&confirm=t" target="_blank" rel="noopener">Download APK</a></li>
+        </ul>
+        <div style="margin-top:20px;">
+          <div class="footer-col-title">Rating</div>
+          <div style="color:#F59E0B;font-size:1.1rem;">⭐⭐⭐⭐⭐</div>
+          <div style="font-size:.78rem;margin-top:4px;">5.0 / 5.0 dari pengguna</div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2026 KasirkuPro. Dibuat dengan <span class="footer-heart">❤️</span> untuk UMKM Indonesia.</span>
+      <span style="font-size:.8rem;">v1.5.0 • Android • 100% Offline</span>
+    </div>
+  </div>
+</footer>
+
+<script src="asset/js/main.js"></script>
+</body>
+</html>
