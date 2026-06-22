@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Toko Peralatan Warung – KasirkuPro</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="asset/css/style.css">
+<style>
+  .toko-hero {
+    background: linear-gradient(135deg, var(--tosca) 0%, var(--tosca-dark) 100%);
+    padding: 80px 20px 60px;
+    text-align: center;
+    color: white;
+  }
+  .toko-hero h1 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: clamp(1.6rem, 4vw, 2.4rem);
+    font-weight: 900;
+    margin-bottom: 12px;
+  }
+  .toko-hero p {
+    font-size: 1rem;
+    opacity: 0.85;
+    max-width: 520px;
+    margin: 0 auto;
+    line-height: 1.7;
+  }
+  .toko-notice {
+    background: #fffbeb;
+    border: 1px solid #fcd34d;
+    border-radius: 10px;
+    padding: 12px 16px;
+    font-size: 0.8rem;
+    color: #92400e;
+    max-width: 800px;
+    margin: 24px auto 0;
+    text-align: center;
+  }
+  .toko-section {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 16px 60px;
+  }
+  .toko-cat-title {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: var(--gray-800);
+    margin: 36px 0 16px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--tosca);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .toko-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 16px;
+  }
+  .prod-card {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    border: 1px solid #e5e7eb;
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+  }
+  .prod-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(13,148,136,0.15);
+  }
+  .prod-img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    background: #f3f4f6;
+  }
+  .prod-img-placeholder {
+    width: 100%;
+    aspect-ratio: 1/1;
+    background: linear-gradient(135deg, #f0fdfa, #ccfbf1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+  }
+  .prod-body {
+    padding: 14px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  .prod-badge {
+    display: inline-block;
+    background: #f0fdfa;
+    color: var(--tosca);
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 3px 8px;
+    border-radius: 20px;
+    margin-bottom: 8px;
+  }
+  .prod-name {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--gray-800);
+    line-height: 1.4;
+    margin-bottom: 6px;
+    flex: 1;
+  }
+  .prod-desc {
+    font-size: 0.78rem;
+    color: var(--gray-500);
+    line-height: 1.5;
+    margin-bottom: 12px;
+  }
+  .prod-btn {
+    display: block;
+    background: var(--tosca);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-decoration: none;
+    transition: background 0.2s;
+  }
+  .prod-btn:hover {
+    background: var(--tosca-dark);
+  }
+  .prod-btn-icon {
+    margin-right: 6px;
+  }
+  .toko-footer-note {
+    text-align: center;
+    font-size: 0.78rem;
+    color: var(--gray-400);
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #e5e7eb;
+  }
+  .back-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--tosca);
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-decoration: none;
+    margin-bottom: 8px;
+  }
+  .back-btn:hover { opacity: 0.8; }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="nav-logo">
+    <div class="nav-logo-icon">
+      <img src="asset/images/logo.png" alt="KasirkuPro" style="width:28px;height:28px;border-radius:6px;" onerror="this.style.display='none'">
+    </div>
+    <span class="nav-logo-text">KasirKu Pro</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html#fitur">Fitur</a></li>
+    <li><a href="index.html#video">Video</a></li>
+    <li><a href="index.html#ulasan">Ulasan</a></li>
+    <li><a href="toko.html" style="color:var(--tosca);font-weight:700;">🛒 Toko</a></li>
+    <li><a href="index.html#tentang">Tentang</a></li>
+  </ul>
+  <a href="index.html#download" class="nav-cta">⬇ Download Gratis</a>
+  <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <ul>
+    <li><a href="index.html#fitur" onclick="toggleMenu()">Fitur</a></li>
+    <li><a href="index.html#video" onclick="toggleMenu()">Video</a></li>
+    <li><a href="index.html#ulasan" onclick="toggleMenu()">Ulasan</a></li>
+    <li><a href="toko.html" onclick="toggleMenu()">🛒 Toko Peralatan</a></li>
+    <li><a href="index.html#tentang" onclick="toggleMenu()">Tentang</a></li>
+  </ul>
+  <a href="index.html#download" class="mobile-cta" onclick="toggleMenu()">⬇ Download Gratis</a>
+</div>
+
+<!-- HERO -->
+<div class="toko-hero">
+  <div class="section-tag" style="background:rgba(255,255,255,.15);color:white;display:inline-block;margin-bottom:16px;">🛒 Toko Peralatan</div>
+  <h1>Lengkapi Warung Kamu</h1>
+  <p>Peralatan kasir terpilih yang langsung kompatibel dengan KasirkuPro. Beli lewat link di bawah untuk mendukung pengembangan aplikasi ini 🙏</p>
+  <div class="toko-notice">
+    💡 Tautan di halaman ini adalah link afiliasi. Harga tetap sama untuk kamu — kami hanya mendapat komisi kecil dari setiap pembelian sebagai dukungan pengembangan KasirkuPro.
+  </div>
+</div>
+
+<!-- PRODUK -->
+<div class="toko-section">
+
+  <a href="index.html" class="back-btn">← Kembali ke Beranda</a>
+
+  <!-- PRINTER -->
+  <div class="toko-cat-title">🖨️ Printer Struk Thermal</div>
+  <div class="toko-grid">
+
+    <div class="prod-card">
+      <div class="prod-img-placeholder">🖨️</div>
+      <div class="prod-body">
+        <span class="prod-badge">⭐ Rekomendasi Utama</span>
+        <div class="prod-name">Printer Thermal Bluetooth MP-58X1 58mm</div>
+        <div class="prod-desc">Bluetooth + USB, baterai 2000mAh, Type-C, garansi 1 tahun. Langsung kompatibel dengan KasirkuPro. Gratis 3 roll kertas thermal!</div>
+        <a href="https://vt.tokopedia.com/t/ZS961j6f4tnEY-RSwKw/" class="prod-btn" target="_blank" rel="noopener">
+          <span class="prod-btn-icon">🛒</span>Beli di TikTok Shop
+        </a>
+      </div>
+    </div>
+
+    <div class="prod-card">
+      <div class="prod-img-placeholder">🖨️</div>
+      <div class="prod-body">
+        <span class="prod-badge">Populer</span>
+        <div class="prod-name">Printer Bluetooth Portabel 58mm + USB Type-C</div>
+        <div class="prod-desc">Portabel, baterai 2000mAh, lebar 58mm, garansi 12 bulan. Support semua aplikasi POS. Gratis 3 roll kertas thermal!</div>
+        <a href="https://vt.tokopedia.com/t/ZS9616f28Qhvc-EVYOB/" class="prod-btn" target="_blank" rel="noopener">
+          <span class="prod-btn-icon">🛒</span>Beli di TikTok Shop
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- KERTAS STRUK -->
+  <div class="toko-cat-title">📜 Kertas Struk Thermal</div>
+  <div class="toko-grid">
+
+    <div class="prod-card">
+      <div class="prod-img-placeholder">📜</div>
+      <div class="prod-body">
+        <span class="prod-badge">Untuk Printer 58mm</span>
+        <div class="prod-name">Kertas Thermal 58x30mm — Isi 20 Roll</div>
+        <div class="prod-desc">Cocok untuk printer 58mm. Isi 20 roll, tanpa BPA, hasil cetak awet dan jelas. Stok bulanan hemat!</div>
+        <a href="https://vt.tokopedia.com/t/ZS961Mnb3maoh-nhWCA/" class="prod-btn" target="_blank" rel="noopener">
+          <span class="prod-btn-icon">🛒</span>Beli di TikTok Shop
+        </a>
+      </div>
+    </div>
+
+    <div class="prod-card">
+      <div class="prod-img-placeholder">📜</div>
+      <div class="prod-body">
+        <span class="prod-badge">Untuk Printer 80mm</span>
+        <div class="prod-name">Kertas Thermal 80x50mm — Paket 10 Roll</div>
+        <div class="prod-desc">Cocok untuk printer 80mm. Paket 10 roll, kualitas premium untuk struk kasir yang rapi dan tahan lama.</div>
+        <a href="https://vt.tokopedia.com/t/ZS961rBbACmkc-mauI3/" class="prod-btn" target="_blank" rel="noopener">
+          <span class="prod-btn-icon">🛒</span>Beli di TikTok Shop
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- BARCODE SCANNER -->
+  <div class="toko-cat-title">📷 Barcode Scanner</div>
+  <div class="toko-grid">
+
+    <div class="prod-card">
+      <div class="prod-img-placeholder">📷</div>
+      <div class="prod-body">
+        <span class="prod-badge">2D — Bisa Scan QR Code</span>
+        <div class="prod-name">Blueprint X2D Scanner Barcode & QR Code USB</div>
+        <div class="prod-desc">Scan 1D & 2D barcode + QR code. Auto scan, plug & play USB. Cocok untuk input produk cepat di KasirkuPro.</div>
+        <a href="https://vt.tokopedia.com/t/ZS961hH7U2CjB-FBDbO/" class="prod-btn" target="_blank" rel="noopener">
+          <span class="prod-btn-icon">🛒</span>Beli di TikTok Shop
+        </a>
+      </div>
+    </div>
+
+    <div class="prod-card">
+      <div class="prod-img-placeholder">📷</div>
+      <div class="prod-body">
+        <span class="prod-badge">1D — Ekonomis</span>
+        <div class="prod-name">Panda PRJ-222 Barcode Scanner 1D USB OTG</div>
+        <div class="prod-desc">Scanner 1D barcode, USB OTG support Android. Plug & play, ringan, cocok untuk warung dan toko kecil.</div>
+        <a href="https://vt.tokopedia.com/t/ZS961h3X8vMGs-LemIv/" class="prod-btn" target="_blank" rel="noopener">
+          <span class="prod-btn-icon">🛒</span>Beli di TikTok Shop
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="toko-footer-note">
+    Harga dapat berubah sewaktu-waktu sesuai kebijakan penjual. Link di atas adalah link afiliasi TikTok Shop.<br>
+    Ada pertanyaan? Hubungi kami di halaman <a href="reports.html" style="color:var(--tosca);">Saran & Masukan</a>.
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer style="background:#111827;color:#9ca3af;padding:32px 20px;text-align:center;font-size:0.82rem;">
+  <div style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;color:white;font-size:1rem;margin-bottom:8px;">KasirKu Pro</div>
+  <div style="margin-bottom:12px;">Aplikasi kasir offline gratis untuk UMKM Indonesia</div>
+  <div style="display:flex;justify-content:center;gap:20px;flex-wrap:wrap;margin-bottom:12px;">
+    <a href="index.html" style="color:#9ca3af;text-decoration:none;">Beranda</a>
+    <a href="index.html#fitur" style="color:#9ca3af;text-decoration:none;">Fitur</a>
+    <a href="toko.html" style="color:var(--tosca);text-decoration:none;font-weight:700;">Toko</a>
+    <a href="reports.html" style="color:#9ca3af;text-decoration:none;">Saran</a>
+    <a href="index.html#download" style="color:#9ca3af;text-decoration:none;">Download</a>
+  </div>
+  <div>© 2026 KasirkuPro · Dibuat dengan ❤️ untuk UMKM Indonesia</div>
+</footer>
+
+<script src="asset/js/main.js"></script>
+</body>
+</html>
